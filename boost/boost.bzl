@@ -156,10 +156,9 @@ def boost_deps():
         http_archive(
             name = "boost",
             build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
-            sha256 = "d73a8da01e8bf8c7eda40b4c84915071a8c8a0df4a6734537ddde4a8580524ee",
             strip_prefix = "boost_1_71_0",
             urls = [
-                "https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.bz2",
+                "https://boostorg.jfrog.io/artifactory/main/release/1.71.0/source/boost_1_71_0.tar.bz2",
             ],
             patch_cmds = [ "rm -f doc/pdf/BUILD", ],
         )
