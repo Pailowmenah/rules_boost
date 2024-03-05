@@ -1,1 +1,19 @@
 workspace(name = "com_github_nelhage_rules_boost")
+
+new_local_repository(
+    name = "python39_include",
+    build_file_content = """
+package(
+    default_visibility = [
+        "//visibility:public",
+    ],
+)
+
+cc_library(
+    name = "include",
+    srcs = glob(["**/*.h"]),
+    includes = ["."]
+)
+""",
+    path = "/usr/include/python3.9",
+)

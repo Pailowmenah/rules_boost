@@ -2678,7 +2678,7 @@ boost_library(
         ":tuple",
         ":type",
         ":utility",
-        "@python27_include//:include",
+        "@python39_include//:include",
     ],
-    linkopts = ["-lpython2.7"],
+    linkopts = ["-lpython3.9"],
 )
