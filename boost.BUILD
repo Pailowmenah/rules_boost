@@ -2643,3 +2643,26 @@ boost_library(
         ":variant2",
     ],
 )
+
+boost_library(
+    name = "python",
+    deps = [
+        ":bind",
+        ":config",
+        ":conversion",
+        ":core",
+        ":detail",
+        ":foreach",
+        ":function",
+        ":iterator",
+        ":lexical_cast",
+        ":mpl",
+        ":numeric_conversion",
+        ":preprocessor",
+        ":smart_ptr",
+        ":static_assert",
+        ":tuple",
+        ":type_traits",
+        ":utility",
+    ],
+)
