@@ -251,7 +251,6 @@ boost_library(
         ":serialization",
         ":type_traits",
         ":utility",
-        ":config",
     ],
 )
 
@@ -600,9 +599,6 @@ boost_library(
 
 boost_library(
     name = "config",
-    deps = [
-        ":config",
-    ],
 )
 
 boost_library(
@@ -1278,7 +1274,6 @@ boost_library(
         ":type",
         ":type_traits",
         ":utility",
-        ":config",
     ],
 )
 
@@ -1369,7 +1364,6 @@ boost_library(
     deps = [
         ":config",
         ":filesystem",
-        ":config",
     ],
 )
 
@@ -1478,7 +1472,6 @@ boost_library(
         ":type_traits",
         ":typeof",
         ":utility",
-        ":config",
     ],
 )
 
@@ -1566,7 +1559,6 @@ boost_library(
         ":throw_exception",
         ":tokenizer",
         ":type_traits",
-        ":config",
     ],
 )
 
@@ -2258,7 +2250,6 @@ _BOOST_TEST_DEPS = [
     ":type",
     ":type_traits",
     ":utility",
-    ":config",
 ]
 
 # An uncompiled Boost.Test library, to be used through boost/test/included/*.
@@ -2524,7 +2515,6 @@ boost_library(
         "libs/python/src/numpy/*.cpp",
         "libs/python/src/object/*.cpp",
     ], exclude = ["**/*/fabscript"]),
-    exclude_src = "libs/python/src/fabscript",
     deps = [
         ":assert",
         ":bind",
