@@ -251,7 +251,7 @@ boost_library(
         ":serialization",
         ":type_traits",
         ":utility",
-        ":version",
+        ":config",
     ],
 )
 
@@ -601,7 +601,7 @@ boost_library(
 boost_library(
     name = "config",
     deps = [
-        ":version",
+        ":config",
     ],
 )
 
@@ -1278,7 +1278,7 @@ boost_library(
         ":type",
         ":type_traits",
         ":utility",
-        ":version",
+        ":config",
     ],
 )
 
@@ -1369,7 +1369,7 @@ boost_library(
     deps = [
         ":config",
         ":filesystem",
-        ":version",
+        ":config",
     ],
 )
 
@@ -1478,7 +1478,7 @@ boost_library(
         ":type_traits",
         ":typeof",
         ":utility",
-        ":version",
+        ":config",
     ],
 )
 
@@ -1566,7 +1566,7 @@ boost_library(
         ":throw_exception",
         ":tokenizer",
         ":type_traits",
-        ":version",
+        ":config",
     ],
 )
 
@@ -2258,7 +2258,7 @@ _BOOST_TEST_DEPS = [
     ":type",
     ":type_traits",
     ":utility",
-    ":version",
+    ":config",
 ]
 
 # An uncompiled Boost.Test library, to be used through boost/test/included/*.
@@ -2515,4 +2515,44 @@ boost_library(
         ":throw_exception",
         ":variant2",
     ],
+)
+
+boost_library(
+    name = "python",
+    srcs = glob([
+        "libs/python/src/converter/*.cpp",
+        "libs/python/src/numpy/*.cpp",
+        "libs/python/src/object/*.cpp",
+    ], exclude = ["**/*/fabscript"]),
+    exclude_src = "libs/python/src/fabscript",
+    deps = [
+        ":assert",
+        ":bind",
+        ":config",
+        ":conversion",
+        ":cstdint",
+        ":detail",
+        ":function",
+        ":get_pointer",
+        ":graph",
+        ":integer",
+        ":iterator",
+        ":lexical_cast",
+        ":math",
+        ":mpl",
+        ":noncopyable",
+        ":operators",
+        ":preprocessor",
+        ":property_map",
+        ":ref",
+        ":scoped_array",
+        ":shared_ptr",
+        ":smart_ptr",
+        ":static_assert",
+        ":tuple",
+        ":type",
+        ":utility",
+        "@python39_include//:include",
+    ],
+    linkopts = ["-lpython3.9"],
 )
