@@ -2524,7 +2524,7 @@ boost_library(
         "libs/python/src/numpy/*.cpp",
         "libs/python/src/object/*.cpp",
     ],
-    exclude_src = ["libs/python/src/fabscript"]
+    exclude_src = ["libs/python/src/fabscript"],
     deps = [
         ":assert",
         ":bind",
